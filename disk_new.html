@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Disco Nuevo</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="img/png" sizes="32x32" href="img/favicon.ico">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+    <header id="header">
+      <nav class="navbar navbar-expand-sm navbar-light">
+        <div class="container">
+        <a class="navbar-brand" href="index.html"><img width="50" src="img/vynil.png" alt=""/></a>
+        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">CRUD</a>
+              <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" href="index.html">Discos</a>
+                <a class="dropdown-item" href="#">#</a>
+              </div>
+            </li>
+          </ul>
+          <form class="d-flex my-2 my-lg-0" id="buscarForm">
+            <input class="form-control me-sm-2" type="text" id="buscarInput" placeholder="Buscar">
+            <button class="btn btn-outline-success my-2 my-sm-0" id="buscarButton" type="submit" >Buscar</button>
+          </form>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container_diskAdd" id="app">
+      <form class="form_update">
+        <div class="row">
+          <div class="col-md-6">
+            <h2>{{nombre}}</h2>
+            <div class="mb-3">
+              <input type="number" name="id" id="id" hidden v-model="id" />
+            </div>
+            <div class="mb-3">
+              <label for="nombre">Nombre</label>
+              <input type="text" name="nombre" id="nombre" v-model="nombre" />
+            </div>
+            <div class="mb-3">
+              <label for="artista">Artista</label>
+              <input type="text" name="artista" id="artista" v-model="artista" />
+            </div>
+            <div class="mb-3">
+              <label for="genero">Género</label>
+              <input type="text" name="genero" id="genero" v-model="genero" />
+            </div>
+            <div class="mb-3">
+              <label for="anio">Año</label>
+              <input type="number" name="anio" id="anio" v-model="anio" />
+            </div>
+            <div class="mb-3">
+              <label for="tracks">Tracks</label>
+              <input type="number" name="tracks" id="tracks" v-model="tracks" />
+            </div>
+            <div class="mb-3">
+              <label for="duracion">Duración</label>
+              <input type="text" name="duracion" id="duracion" v-model="duracion" />
+            </div>
+            <div class="mb-3">
+              <img src="img/vynil.png" class="vinyl-container" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="mb-3">
+              <label for="imagen">Imagen</label>
+              <input type="text" name="imagen" id="imagen" v-model="imagen" />
+              <img width="260" :src="imagen" alt="" class="img_update" />
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn btn-success btn-actualizar" v-on:click="grabar()">Agregar</button>
+      </form>
+      
+    </div>
+
+    <footer class="footer" id="footer"></footer>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./js/disk_update.js"></script>
+  </body>
+</html>
