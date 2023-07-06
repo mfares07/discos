@@ -236,6 +236,6 @@ h1 {
     }
 
     100% {
-        transform: rotate(60deg);
+        transform: rotate(360deg);
     }
 }
